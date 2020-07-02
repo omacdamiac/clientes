@@ -14,40 +14,32 @@ import { environment } from "../environments/environment";
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule,
-          MatDialogModule,
-          MatPaginatorModule,
-          MatTableModule } from '@angular/material';
-import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 import { AppComponent } from './app.component';
-import { ListUsersComponent } from './components/list-users/list-users.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
+import { ClientesModule } from './components/list-users/clientes.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListUsersComponent,
     NewUserComponent
   ],
   entryComponents: [NewUserComponent],
   imports: [
     BrowserModule,
     ChartsModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    MatGridListModule,
-    MatDialogModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatTooltipModule  ],
+    ClientesModule,
+    AppRoutingModule
+  ],
   providers: [UsersService],
   bootstrap: [AppComponent]
 })

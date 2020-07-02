@@ -4,7 +4,7 @@
     <input type="hidden" name="$keyRegistro" [(ngModel)]="_api.selectedUser.$keyRegistro" formControlName="$keyRegistro">
     <div class="form-group">
         <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control" [(ngModel)]="_api.selectedUser.name" formControlName="name" />
+        <input type="text" name="name" id="name" placeholder="Nombre" class="form-control" [ngModel]="_api.selectedUser.name" formControlName="name" />
 
         <span class="validacion" *ngIf="todoForm.controls['name'].touched && todoForm.controls['name'].errors?.required">Nombre es requerido</span>
     </div>

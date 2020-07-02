@@ -35,6 +35,7 @@ export class NewUserComponent implements OnInit {
       this.router.navigate(['/lista_clientes']);
     } else {
       this._api.updateUser(formUser.value);
+      this.router.navigate(['/lista_clientes']);
     }
   }
 
@@ -50,6 +51,8 @@ export class NewUserComponent implements OnInit {
 
   onReset(){
     this.createForm();
+    this.modal.closeAll();
+
   }
 
   edadw():void{
